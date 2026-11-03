@@ -1,0 +1,152 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+// Contract to demonstrate Fallback and Receive
+contract TestPayable {
+
+    uint public x;
+    uint public y;
+
+    // Executes when Ether is received with empty calldata
+    receive() external payable {
+        x = 2;
+        y = msg.value;
+    }
+
+    // Executes when unknown function data is received
+    fallback() external payable {
+        x = 1;
+        y = msg.value;
+    }
+}
+
+
+// Main Student Registration Contract
+contract StudentRegister {
+
+    // Mapping to store student records
+    mapping(uint => Student) private students;
+
+    address public owner;
+
+    // Constructor
+    constructor() payable {
+        owner = msg.sender;
+    }
+
+    // Modifier to restrict registration to owner
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only owner can register");
+        _;
+    }
+
+    // Student structure
+    struct Student {
+        uint studentId;
+        string name;
+        uint[] marks;
+        uint percentage;
+        bool exist;
+    }
+
+    // Register a student
+    function register(
+        uint studentId,
+        string memory name,
+        uint[] memory marks
+    ) public onlyOwner returns (uint) {
+
+        require(!students[studentId].exist,
+            "Student data already exists");
+
+        require(marks.length == 3,
+            "Exactly 3 subjects are required");
+
+        require(bytes(name).length > 0,
+            "Name cannot be empty");
+
+        uint totalMarks = getArraySum(marks);
+
+        uint percentage = (totalMarks * 100) / 300;
+
+        students[studentId] = Student(
+            studentId,
+            name,
+            marks,
+            percentage,
+            true
+        );
+
+        return percentage;
+    }
+
+    // Get student details
+    function getStudentDetails(uint studentId)
+        public
+        view
+        returns (
+            uint,
+            string memory,
+            uint[] memory,
+            uint
+        )
+    {
+        require(students[studentId].exist,
+            "No student data available");
+
+        Student memory student = students[studentId];
+
+        return (
+            student.studentId,
+            student.name,
+            student.marks,
+            student.percentage
+        );
+    }
+
+    // Calculate sum of marks
+    function getArraySum(uint[] memory array)
+        private
+        pure
+        returns (uint sum)
+    {
+        for (uint i = 0; i < array.length; i++) {
+
+            require(array[i] <= 100,
+                "Marks must be between 0 and 100");
+
+            sum += array[i];
+        }
+    }
+
+    // Call TestPayable contract to demonstrate fallback
+    function callTestPayable(TestPayable test)
+        public
+        payable
+        returns (bool)
+    {
+        // Call an unknown function with no Ether.
+        // This triggers fallback().
+        (bool success,) = address(test).call(
+            abi.encodeWithSignature("nonExistingFunction()")
+        );
+
+        require(success, "Fallback call failed");
+
+        // Call unknown function with 1 Wei.
+        // This also triggers fallback().
+        (success,) = address(test).call{value: 1}(
+            abi.encodeWithSignature("nonExistingFunction()")
+        );
+
+        require(success, "Fallback payable call failed");
+
+        // Send 2 Wei with empty calldata.
+        // This triggers receive().
+        (success,) = address(test).call{value: 2}("");
+
+        require(success, "Receive call failed");
+
+        return true;
+    }
+}
