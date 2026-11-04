@@ -1,0 +1,683 @@
+BCT PRACTICALS – IMPORTANT VIVA CONCEPTS Simple, to-the-point revision
+notes
+
+============================================================ 1.
+BLOCKCHAIN BASICS
+============================================================
+
+Blockchain - A blockchain is a digital record book shared across many
+computers. - Data is stored in blocks, and blocks are connected in
+order. - Once a block is confirmed, changing its data is very difficult.
+Example: Ethereum records ETH transfers and smart-contract activity.
+Application: Cryptocurrency, supply-chain tracking, digital identity,
+and smart contracts.
+
+Distributed ledger - A record of transactions shared and maintained by
+multiple computers. - There is no single central computer controlling
+the entire record. Example: Many Ethereum nodes maintain copies of
+blockchain data. Application: Shared records between organisations.
+
+Decentralisation - Control is distributed among many participants
+instead of one central authority. Example: Ethereum is maintained by a
+network of nodes. Application: Public blockchain networks and
+decentralised applications.
+
+Block - A group of validated transactions stored together. - Blocks
+contain information that connects them to earlier blocks.
+
+Hash - A fixed-length value generated from input data using a hash
+function. - A small change in input produces a different hash. Example:
+A transaction or block can be represented using a hash. Application:
+Data integrity and linking blockchain blocks.
+
+Node - A computer participating in a blockchain network. - Nodes store,
+verify, or relay blockchain information.
+
+Consensus mechanism - A method by which network participants agree on
+valid blockchain data. Example: Ethereum uses Proof of Stake.
+Application: Helps the network agree without a central authority.
+
+Proof of Work (PoW) - Participants use computational work to compete to
+add a block. - It requires significant computing power. Example: Bitcoin
+uses Proof of Work.
+
+Proof of Stake (PoS) - Validators stake cryptocurrency to participate in
+validating blocks. - Ethereum uses Proof of Stake. Application:
+Blockchain transaction validation.
+
+============================================================ 2.
+CRYPTOCURRENCY AND ETHEREUM
+============================================================
+
+Cryptocurrency - A digital asset that can be transferred using
+cryptographic technology. Example: Bitcoin (BTC) and Ether (ETH).
+Application: Digital payments and blockchain-based applications.
+
+Ethereum - A blockchain platform that supports smart contracts and
+decentralised applications. - It is not just a cryptocurrency.
+
+Ether (ETH) - The native cryptocurrency of the Ethereum network. - ETH
+is used to pay transaction fees and can be transferred between accounts.
+
+Ethereum vs Ether - Ethereum = blockchain platform. - Ether =
+cryptocurrency used on the Ethereum network.
+
+Smart contract - A program stored and executed on a blockchain. - It
+runs according to the conditions written in its code. Example: A bank
+smart contract that accepts deposits and allows withdrawals.
+Application: Banking, voting, games, supply chain, and DeFi.
+
+DApp (Decentralised Application) - An application that uses smart
+contracts and a blockchain backend. Example: A decentralised exchange.
+Application: Finance, gaming, and digital ownership.
+
+============================================================ 3. METAMASK
+AND CRYPTO WALLETS – PR 2
+============================================================
+
+Cryptocurrency wallet - A wallet manages the keys used to access
+blockchain accounts. - Cryptocurrency is recorded on the blockchain; it
+is not literally stored inside the wallet. Example: MetaMask manages an
+Ethereum account.
+
+MetaMask - A browser extension and mobile wallet used to manage
+Ethereum-compatible accounts. - It can connect to websites and smart
+contracts. Application: Sending test ETH and connecting Remix IDE to
+deploy contracts.
+
+Public address - An account identifier that can be shared to receive
+cryptocurrency. - On Ethereum, it usually starts with 0x. Example:
+0x1234…abcd Application: Receiving ETH and checking transactions on a
+block explorer.
+
+Private key - A secret cryptographic key that controls an account. -
+Anyone who gets it may control the account. Important: Never share it.
+
+Secret Recovery Phrase (SRP) - A set of words used to recover a
+wallet. - Anyone who gets the phrase may gain access to the wallet.
+Important: Never share it or store it in a public place.
+
+Wallet password - Protects access to the wallet on the current device. -
+It is not the same as the Secret Recovery Phrase.
+
+Public address vs private key - Public address: share it to receive
+funds. - Private key: keep it secret; it authorises account actions.
+
+Mainnet - The real Ethereum network where ETH has real-world value. -
+Transactions use real ETH and real fees.
+
+Testnet - A network used to test blockchain applications without risking
+real funds. Example: Sepolia. Application: Practising deployments and
+transactions.
+
+Sepolia - An Ethereum test network used by developers. - Sepolia ETH is
+test ETH and has no real monetary value. Application: Deploying and
+testing smart contracts.
+
+Faucet - A service that provides testnet cryptocurrency. Example: A
+Sepolia faucet provides test ETH. Application: Paying gas fees during
+testnet practice.
+
+Transaction - An operation submitted to a blockchain. Example: Sending
+ETH or calling a function that changes contract data.
+
+Block explorer - A website used to inspect blockchain transactions,
+addresses, blocks, and contracts. Example: Sepolia Etherscan.
+Application: Checking transaction status, gas used, and fees.
+
+============================================================ 4. GAS AND
+TRANSACTION FEES
+============================================================
+
+Gas - A unit that measures the computational work required to execute an
+Ethereum operation. Example: Updating a value in a smart contract uses
+gas.
+
+Gas limit - The maximum amount of gas a user allows a transaction to
+consume.
+
+Gas used - The actual amount of gas consumed by the transaction.
+
+Gas price - The price paid per unit of gas.
+
+Transaction fee - The fee paid for processing a transaction. - Basic
+formula: Transaction fee = Gas used x Effective gas price.
+
+Wei - The smallest unit of Ether. - 1 ETH = 1,000,000,000,000,000,000
+Wei.
+
+Gwei - A unit commonly used to express gas prices. - 1 Gwei =
+1,000,000,000 Wei. - 1 ETH = 1,000,000,000 Gwei.
+
+Why do transactions need gas? - Gas compensates the network for
+computation and helps prevent unlimited resource usage.
+
+Why can two transactions have different fees? - They may use different
+amounts of gas or be submitted when gas prices differ.
+
+============================================================ 5. SOLIDITY
+BASICS ============================================================
+
+Solidity - A programming language used to write smart contracts for
+Ethereum-compatible blockchains. Example: A BankAccount contract.
+Application: Building blockchain applications.
+
+Smart contract - Code deployed at a blockchain address. - Its functions
+can read or change contract data.
+
+Contract - The main building block in Solidity. Example: contract
+BankAccount { // variables and functions }
+
+SPDX licence identifier - A comment that declares the source-code
+licence. Example: // SPDX-License-Identifier: MIT
+
+Pragma - Specifies the Solidity compiler version range. Example: pragma
+solidity ^0.8.20;
+
+State variable - A variable declared inside a contract and stored on the
+blockchain. Example: uint public count;
+
+Local variable - A variable declared inside a function. - It is used
+temporarily while that function executes.
+
+Data types - uint: unsigned integer. - int: signed integer. - bool: true
+or false. - address: Ethereum account or contract address. - string:
+text. - bytes: byte data.
+
+uint - An unsigned integer; it cannot store negative values. Example:
+uint age = 20;
+
+address - Stores an Ethereum address. Example: address public owner;
+
+msg.sender - The address that called the current function. Example: In a
+deposit function, it identifies the depositor.
+
+msg.value - The amount of Ether sent with the current payable call. - It
+is measured in Wei.
+
+address(this) - Refers to the address of the current contract.
+
+address(this).balance - Gives the amount of Ether held by the current
+contract, in Wei.
+
+Function - A reusable block of code that performs an operation. Example:
+deposit() adds funds to a user’s recorded balance.
+
+Constructor - A special function that runs once when a contract is
+deployed. - Commonly used to initialise values. Example: owner =
+msg.sender;
+
+Visibility - public: accessible internally and externally. - private:
+accessible only inside the same contract. - internal: accessible inside
+the contract and derived contracts. - external: intended to be called
+from outside the contract.
+
+View function - Reads contract state but does not modify it. Example:
+showBalance().
+
+Pure function - Does not read or modify contract state. Example: adding
+two input numbers.
+
+Payable - Allows a function or address to receive Ether. Example:
+function deposit() public payable.
+
+Require - Checks a condition. - If the condition is false, execution
+stops and the transaction reverts. Example: require(amount > 0, “Amount
+must be positive”);
+
+Return - Sends a value back from a function. Example: return total;
+
+Mapping - A key-value data structure. - It is useful for looking up a
+value using a key. Example: mapping(address => uint) balances; This maps
+each wallet address to its balance.
+
+Array - A collection of values stored in order. Example: uint[] marks =
+[80, 90, 70];
+
+Struct - A custom data type that groups related variables. Example:
+struct Student { uint id; string name; uint marks; } Application:
+Storing student records.
+
+Modifier - Reusable conditions applied to functions. Example: onlyOwner
+ensures only the owner can call a function.
+
+Event - A log emitted by a smart contract. - Applications can listen for
+events. Example: An event can record that a deposit happened.
+
+Fallback function - A special function called when a contract receives a
+call that does not match any available function. - It can be payable if
+it must accept Ether. Example: fallback() external payable { }
+
+Receive function - A special function called when a contract receives
+Ether with empty calldata. - It must be external payable. Example:
+receive() external payable { }
+
+Fallback vs receive - receive(): empty calldata and Ether sent. -
+fallback(): unknown function call, or empty calldata when receive() is
+absent. - If an unknown function call sends Ether, fallback must be
+payable to accept it.
+
+Wei - Solidity uses Wei as the unit for msg.value and Ether transfers. -
+1 ETH = 10^18 Wei.
+
+============================================================ 6. BANK
+ACCOUNT SMART CONTRACT – PR 3
+============================================================
+
+Mapping for balances - The contract uses mapping(address => uint256) to
+associate each user’s wallet address with a recorded balance. Example:
+balances[msg.sender] += msg.value;
+
+deposit() - Marked payable so it can receive Ether. - msg.value is the
+amount sent by the user. - require(msg.value > 0) prevents a zero-value
+deposit. - The amount is added to the caller’s recorded balance.
+
+withdraw(uint amount) - Takes the amount the user wants to withdraw. -
+Checks that amount is greater than zero. - Checks that the user’s
+recorded balance is enough. - Reduces the recorded balance and then
+sends Ether to the user. - If the transfer fails, require(success)
+reverts the transaction.
+
+Why update balance before transferring Ether? - It follows the
+checks-effects-interactions pattern. - It reduces the risk of reentrancy
+attacks.
+
+Reentrancy - A security problem where an external contract repeatedly
+calls back into a function before the first call has finished. - It may
+cause funds to be withdrawn more than once if the contract is poorly
+written. Application of protection: Update state before making an
+external transfer; use suitable guards where needed.
+
+call() - A low-level method used to interact with another address. - It
+can transfer Ether and execute contract code. Example: (bool success, )
+= payable(msg.sender).call{value: amount}(““); - success indicates
+whether the call succeeded.
+
+showBalance() - Returns the recorded balance of the person calling the
+function. - It uses msg.sender to identify the user.
+
+contractBalance() - Returns the actual Ether held by the contract. - It
+uses address(this).balance.
+
+User balance vs contract balance - User balance: amount recorded for one
+address in the mapping. - Contract balance: total Ether held by the
+contract. Example: If a user deposits 0.001 ETH and withdraws 0.0004
+ETH, the recorded balance becomes 0.0006 ETH, ignoring any other
+deposits or transfers.
+
+Checks-Effects-Interactions pattern 1. Checks: Validate conditions. 2.
+Effects: Update contract state. 3. Interactions: Call an external
+address. Application: Helps reduce reentrancy risk.
+
+Why is deposit payable? - Because the function must accept Ether.
+
+Why is showBalance view? - It only reads stored data and does not change
+it.
+
+Why does withdraw need a transaction? - It changes stored data and
+transfers Ether, so it changes blockchain state.
+
+============================================================ 7. STUDENT
+REGISTER, STRUCT, ARRAY AND FALLBACK – PR 4
+============================================================
+
+StudentRegister contract - Stores student records using a mapping and a
+Student struct. - The owner is set during deployment.
+
+TestPayable contract - A separate contract used to demonstrate receive()
+and fallback(). - It stores x and y to show which special function ran
+and how much Ether was received.
+
+Struct Student - Groups student information such as studentId, name,
+marks, percentage, and exist. Application: Keeping related student
+details together.
+
+Mapping - mapping(uint => Student) students; - Student ID is the key and
+the Student record is the value. - A mapping is not an array.
+
+Dynamic array - uint[] marks; - Stores a list of marks. - marks.length
+gives the number of elements.
+
+Why use exist? - A mapping returns a default value when a key has never
+been set. - The exist flag helps identify whether a student record was
+registered.
+
+Owner - The address that deploys the contract is saved using owner =
+msg.sender.
+
+onlyOwner modifier - Checks whether msg.sender equals owner. - It
+prevents other accounts from registering student data.
+
+Underscore in modifier - The symbol _; tells Solidity where to execute
+the function body after the modifier’s checks pass.
+
+register() - Checks that the student ID is not already registered. -
+Checks that exactly three subject marks are supplied. - Checks that the
+name is not empty. - Calculates total marks and percentage. - Stores the
+Student record in the mapping.
+
+Percentage calculation - If there are 3 subjects, each out of 100,
+maximum marks = 300. - Percentage = (total marks * 100) / 300. Example:
+80 + 90 + 70 = 240. Percentage = (240 * 100) / 300 = 80%.
+
+getArraySum() - Loops through the marks array and adds the marks. - The
+code checks that each mark is at most 100. - It is private and pure
+because it is an internal calculation that does not read or change
+contract state.
+
+for loop - Repeats a block of code. Example: for (uint i = 0; i <
+array.length; i++) { sum += array[i]; }
+
+getStudentDetails() - Reads a student’s record using the student ID. -
+It is view because it does not modify blockchain state. - It returns the
+ID, name, marks, and percentage.
+
+Low-level call - address(test).call(…) sends a call to another
+contract. - It returns a success value and returned data. - In this
+practical, it is used to test fallback and receive behaviour.
+
+abi.encodeWithSignature() - Encodes a function signature and its
+arguments into call data. Example:
+abi.encodeWithSignature(“nonExistingFunction()”); - Here it deliberately
+creates a call for a function that does not exist in TestPayable, so
+fallback() is triggered.
+
+Empty calldata - “” means no function data is sent. - When Ether is sent
+with empty calldata, receive() is triggered if it exists.
+
+How the practical tests fallback and receive 1. Unknown function call
+with 0 Wei: fallback() runs. 2. Unknown function call with 1 Wei:
+payable fallback() runs. 3. Empty calldata with 2 Wei: receive() runs.
+4. In the given code, x becomes 2 and y becomes 2 after the final
+receive call because it overwrites the values set by earlier calls. 5.
+The outer call needs at least 3 Wei to forward 1 Wei and 2 Wei. Any
+extra value sent to the outer function remains in StudentRegister unless
+the code forwards it.
+
+Important observation - Final x = 2 and y = 2 show that receive() ran
+last. - To demonstrate fallback independently, inspect its state
+immediately after a fallback-only call or use a separate test. - A
+successful sequence also indicates that the earlier low-level calls did
+not revert, assuming the calls targeted the intended deployed
+TestPayable contract.
+
+============================================================ 8. REMIX
+IDE AND DEPLOYMENT
+============================================================
+
+Remix IDE - A browser-based development environment for writing,
+compiling, deploying, and testing Solidity smart contracts. Application:
+Used to create and test the BankAccount and StudentRegister contracts.
+
+Compiler - Converts Solidity source code into bytecode and ABI. - The
+compiler version should be compatible with the pragma statement.
+
+Bytecode - Machine-readable code deployed to the blockchain.
+
+ABI (Application Binary Interface) - Describes how external applications
+can interact with a contract’s functions. - Remix uses the ABI to show
+contract functions and accept inputs.
+
+Deploy - Publishes the compiled contract to a blockchain network. -
+Deployment creates a contract address and consumes gas.
+
+Injected Provider - Remix connects to a wallet extension such as
+MetaMask. - MetaMask asks the user to approve transactions.
+
+Account - The wallet address used to deploy or interact with the
+contract.
+
+Contract address - The blockchain address where a deployed smart
+contract is located.
+
+Deploy vs call - Deploy: creates a contract on the blockchain. -
+Call/read: reads data without changing blockchain state. -
+Transact/write: changes blockchain state and usually requires gas.
+
+Transaction confirmation - MetaMask displays transaction details and
+asks for approval. - After approval, the transaction is sent to the
+network.
+
+============================================================ 9.
+IMPORTANT DIFFERENCES
+============================================================
+
+1.  Ethereum vs Ether
+
+-   Ethereum is the blockchain platform.
+-   Ether is its native cryptocurrency.
+
+2.  Mainnet vs Testnet
+
+-   Mainnet uses real assets.
+-   Testnet uses test assets for development and practice.
+
+3.  Public address vs Private key
+
+-   Public address can be shared.
+-   Private key must remain secret.
+
+4.  Wallet password vs Recovery phrase
+
+-   Password protects the wallet on a device.
+-   Recovery phrase restores access to the wallet.
+
+5.  Mapping vs Array
+
+-   Mapping stores key-value associations.
+-   Array stores ordered elements and supports index-based access.
+
+6.  Struct vs Mapping
+
+-   Struct groups related fields into one custom type.
+-   Mapping associates keys with values.
+
+7.  receive() vs fallback()
+
+-   receive() handles empty calldata with Ether.
+-   fallback() handles unknown function calls, and can handle empty
+    calldata if receive() is absent.
+
+8.  payable vs view
+
+-   payable allows a function to receive Ether.
+-   view allows reading state without modifying it.
+
+9.  view vs pure
+
+-   view can read contract state.
+-   pure cannot read or modify contract state.
+
+10. require vs assert
+
+-   require checks input or conditions and reverts if false.
+-   assert checks internal conditions that should never be false.
+
+11. Gas limit vs Gas used
+
+-   Gas limit is the maximum allowed.
+-   Gas used is the actual amount consumed.
+
+12. User balance vs Contract balance
+
+-   User balance is the amount recorded for a user.
+-   Contract balance is the total Ether held by the contract.
+
+13. Deploy vs Transact
+
+-   Deploy creates the contract.
+-   Transact calls a function that changes blockchain state.
+
+14. Node vs Validator
+
+-   A node participates in the blockchain network.
+-   A validator is a participant selected to propose or attest blocks
+    under Proof of Stake.
+
+============================================================ 10. COMMON
+VIVA QUESTIONS – QUICK ANSWERS
+============================================================
+
+Q1. What is blockchain? A. A distributed digital ledger where records
+are stored in linked blocks.
+
+Q2. What is decentralisation? A. Control is shared among network
+participants instead of one central authority.
+
+Q3. What is Ethereum? A. A blockchain platform that supports smart
+contracts and DApps.
+
+Q4. What is Ether? A. Ethereum’s native cryptocurrency, used for
+transfers and transaction fees.
+
+Q5. What is a smart contract? A. A program deployed on a blockchain that
+executes according to its code.
+
+Q6. What is MetaMask? A. A wallet used to manage Ethereum accounts and
+connect to blockchain applications.
+
+Q7. Why do we need a wallet? A. To manage the keys that allow us to
+access and authorise actions from a blockchain account.
+
+Q8. Can we share our public address? A. Yes. It is used to receive
+funds.
+
+Q9. Can we share our private key or recovery phrase? A. No. Anyone who
+gets them may control the wallet.
+
+Q10. What is Sepolia? A. An Ethereum test network used to test smart
+contracts and transactions.
+
+Q11. What is a faucet? A. A service that provides test cryptocurrency.
+
+Q12. What is gas? A. A measure of the computation required for a
+blockchain operation.
+
+Q13. What is Solidity? A. A programming language used to write Ethereum
+smart contracts.
+
+Q14. What is a constructor? A. A special function that runs once when
+the contract is deployed.
+
+Q15. What is msg.sender? A. The address that called the current
+function.
+
+Q16. What is msg.value? A. The amount of Ether sent with the current
+payable call, in Wei.
+
+Q17. Why is payable used? A. It allows a function to receive Ether.
+
+Q18. What does require do? A. It checks a condition and reverts if the
+condition is false.
+
+Q19. What is a mapping? A. A key-value data structure.
+
+Q20. What is a struct? A. A custom data type that groups related
+variables.
+
+Q21. What is a modifier? A. Reusable code that checks conditions before
+a function executes.
+
+Q22. What is fallback? A. A special function that handles calls that do
+not match a function in the contract.
+
+Q23. What is receive? A. A special function that handles Ether sent with
+empty calldata.
+
+Q24. Why is receive payable? A. Because it is designed to receive Ether.
+
+Q25. What is reentrancy? A. An attack where an external contract calls
+back into a function before the earlier call finishes.
+
+Q26. Why update balance before sending Ether? A. To follow
+checks-effects-interactions and reduce reentrancy risk.
+
+Q27. What is Remix? A. A browser-based IDE for writing, compiling,
+deploying, and testing Solidity contracts.
+
+Q28. What is ABI? A. A description of how applications interact with
+contract functions.
+
+Q29. What is bytecode? A. The compiled machine-readable code of a smart
+contract.
+
+Q30. What is Etherscan? A. A block explorer used to inspect
+transactions, addresses, and contracts.
+
+Q31. Does a read-only function cost gas? A. A normal read call made
+off-chain does not require an on-chain transaction or gas payment by the
+user. Calling it from another contract during a transaction does consume
+gas.
+
+Q32. Why does deployment cost gas? A. The network must process and store
+the contract’s code.
+
+Q33. What is the use of onlyOwner? A. It restricts a function so only
+the contract owner can execute it.
+
+Q34. Why use a mapping for students? A. It allows a student record to be
+retrieved directly using the student ID.
+
+Q35. Why use an array for marks? A. It stores multiple subject marks in
+order.
+
+Q36. Why use an exist flag? A. To identify whether a student record has
+actually been registered.
+
+Q37. Why is the percentage denominator 300? A. There are three subjects,
+each with a maximum of 100 marks.
+
+Q38. What does address(this).balance return? A. The total Ether balance
+held by the current contract, in Wei.
+
+Q39. What does call() return? A. It returns a success flag and returned
+data.
+
+Q40. What happens if require fails? A. The transaction reverts; state
+changes made by that transaction are undone.
+
+============================================================ 11.
+PRACTICAL APPLICATIONS
+============================================================
+
+-   Cryptocurrency wallets: sending, receiving, and managing blockchain
+    accounts.
+-   Smart contracts: automatic execution of agreed rules.
+-   Banking: deposit, withdrawal, and payment logic.
+-   Student records: storing and verifying academic records.
+-   Supply chain: tracking product movement and ownership.
+-   Voting: recording votes transparently.
+-   DeFi: decentralised lending, borrowing, and exchanges.
+-   NFTs: representing ownership of digital or tokenised assets.
+-   Block explorers: checking transaction history and contract activity.
+
+============================================================ 12.
+LAST-MINUTE REVISION
+============================================================
+
+-   Ethereum = platform; Ether = currency.
+-   MetaMask = wallet for managing keys and connecting to DApps.
+-   Public address = shareable; private key and recovery phrase =
+    secret.
+-   Sepolia = testnet; faucet = gives test ETH.
+-   Gas = computational work; transaction fee = gas used x gas price.
+-   Solidity = smart-contract language.
+-   msg.sender = caller; msg.value = Ether sent in Wei.
+-   payable = can receive Ether.
+-   view = reads state; pure = neither reads nor changes state.
+-   mapping = key-value; array = ordered collection; struct = grouped
+    fields.
+-   constructor = runs once at deployment.
+-   modifier = reusable access/condition check.
+-   receive = empty calldata + Ether.
+-   fallback = unknown function call.
+-   require = condition check; failure reverts.
+-   Remix = write, compile, deploy, test.
+-   ABI = interaction description; bytecode = compiled code.
+-   BankAccount: deposit, withdraw, showBalance, contractBalance.
+-   StudentRegister: mapping, struct, marks array, owner, onlyOwner,
+    percentage.
+-   TestPayable: fallback and receive demonstration.
+-   Always protect the wallet recovery phrase and private key.
+
+END OF NOTES
