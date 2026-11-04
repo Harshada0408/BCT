@@ -1,0 +1,283 @@
+# BCT – Important Theory Concepts for Viva
+
+## 1. Introduction to Blockchain
+
+1\. Blockchain
+
+A blockchain is a digital record book that stores information in blocks. Each block is connected to the previous block, making the records difficult to change.
+
+Example: Recording Bitcoin transactions.
+
+2\. Distributed Ledger Technology (DLT)
+
+It is a technology in which the same digital records are shared and maintained across multiple computers.
+
+Example: Multiple computers maintaining transaction records instead of one central server.
+
+3\. Decentralisation
+
+It means that control is distributed among multiple participants rather than one central authority.
+
+Example: Bitcoin does not depend on a single bank to process transactions.
+
+4\. Cryptography
+
+Cryptography is the technique of protecting information using mathematical methods so that only authorised users can access or verify it.
+
+Application: Securing blockchain transactions and wallets.
+
+5\. Hashing
+
+Hashing converts input data into a fixed-length output called a hash. Even a small change in the original data produces a different hash.
+
+Example: SHA-256 is a commonly used hashing algorithm.
+
+6\. Digital Signature
+
+A digital signature is used to verify the identity of the sender and confirm that the data has not been changed.
+
+Application: Verifying cryptocurrency transactions.
+
+7\. Immutability
+
+Immutability means that once information is recorded and confirmed on a blockchain, changing it is extremely difficult.
+
+Application: Maintaining reliable transaction records.
+
+8\. Transparency
+
+Blockchain transactions can be viewed and verified by participants, depending on the type of blockchain.
+
+Application: Tracking transactions publicly.
+
+## 2. Types and Working of Blockchain
+
+9\. Types of Blockchain
+
+- Public Blockchain: Anyone can participate in the network. Example: Bitcoin and Ethereum.
+- Private Blockchain: Controlled by a single organisation. Example: A company's internal blockchain.
+- Consortium Blockchain: Managed by a group of organisations. Example: Banks sharing transaction records.
+- Hybrid Blockchain: Combines public and private blockchain features.
+
+10\. How Does Blockchain Work?
+
+1. A user initiates a transaction.
+2. The transaction is broadcast to the network.
+3. Network participants verify it.
+4. Valid transactions are grouped into a block.
+5. The block is added to the blockchain.
+6. The updated record is shared across the network.
+
+11\. Block
+
+A block is a collection of transaction records stored together. It also contains information that connects it to the previous block.
+
+12\. Node
+
+A node is a computer that participates in a blockchain network by storing, verifying or sharing blockchain information.
+
+13\. Peer-to-Peer (P2P) Network
+
+It is a network where computers communicate directly with one another without depending on a central server.
+
+Application: Sharing transactions in blockchain networks.
+
+## 3. Consensus Mechanisms
+
+14\. Consensus Mechanism
+
+It is a method used by blockchain participants to agree on which transactions and blocks are valid.
+
+15\. Proof of Work (PoW)
+
+In Proof of Work, participants use computational power to solve mathematical puzzles to add new blocks.
+
+Example: Bitcoin.
+
+16\. Proof of Stake (PoS)
+
+In Proof of Stake, validators lock cryptocurrency as a stake to participate in validating transactions and blocks.
+
+Example: Ethereum.
+
+17\. Difference between PoW and PoS
+
+| Proof of Work                      | Proof of Stake               |
+| ---------------------------------- | ---------------------------- |
+| Uses computational power.          | Uses cryptocurrency staking. |
+| Requires high computing resources. | Generally uses less energy.  |
+| Miners participate.                | Validators participate.      |
+| Example: Bitcoin.                  | Example: Ethereum.           |
+
+18\. Mining
+
+Mining is the process used in Proof of Work blockchains to validate transactions and add new blocks.
+
+19\. Validator
+
+A validator is a participant in a Proof of Stake network who helps verify transactions and maintain the blockchain.
+
+20\. Fork
+
+A fork happens when a blockchain's rules or software are changed, sometimes resulting in different versions of the blockchain.
+
+## 4. Cryptocurrency and Wallets
+
+21\. Cryptocurrency
+
+Cryptocurrency is a digital asset secured using cryptography and transferred through a blockchain network.
+
+Examples: Bitcoin, Ether.
+
+22\. Bitcoin
+
+Bitcoin is the first widely recognised decentralised cryptocurrency. It was introduced by Satoshi Nakamoto.
+
+23\. Ethereum
+
+Ethereum is a blockchain platform that supports cryptocurrency transfers, smart contracts and decentralised applications.
+
+24\. Ether
+
+Ether (ETH) is the native cryptocurrency of Ethereum. It is used for transactions and network fees.
+
+25\. Cryptocurrency Wallet
+
+A cryptocurrency wallet manages the keys that allow users to access and control their blockchain accounts.
+
+26\. Hot Wallet
+
+A hot wallet is connected to the internet, making it convenient for regular transactions.
+
+Example: MetaMask.
+
+27\. Cold Wallet
+
+A cold wallet stores private keys offline, making it less exposed to online attacks.
+
+Example: Hardware wallet.
+
+28\. Public Key and Private Key
+
+- Public key: Used to identify or verify an account.
+- Private key: Secret information used to authorise transactions.
+
+29\. Digital Wallet vs Bank Account
+
+A bank account is managed by a financial institution, whereas a crypto wallet gives users control over the keys to their blockchain accounts.
+
+## 5. Ethereum and Smart Contracts
+
+30\. Smart Contract
+
+A smart contract is a program stored on a blockchain that automatically executes when predefined conditions are satisfied.
+
+Example: Automatically releasing payment after a delivery condition is met.
+
+31\. Ethereum Virtual Machine (EVM)
+
+EVM is the environment that executes smart contracts on Ethereum.
+
+32\. Decentralised Application (DApp)
+
+A DApp is an application that uses blockchain and smart contracts instead of depending entirely on a central server.
+
+Example: Decentralised cryptocurrency exchanges.
+
+33\. Gas Fee
+
+Gas fee is the fee paid for processing transactions and executing operations on Ethereum.
+
+34\. Mainnet
+
+Mainnet is the actual blockchain network where real transactions take place using real cryptocurrency.
+
+35\. Testnet
+
+Testnet is a network used for testing applications and smart contracts without using real cryptocurrency.
+
+Example: Sepolia.
+
+## 6. Blockchain Applications
+
+36\. DeFi (Decentralised Finance)
+
+DeFi provides financial services using blockchain and smart contracts without depending on traditional financial intermediaries.
+
+Example: Decentralised lending and borrowing.
+
+37\. NFT (Non-Fungible Token)
+
+An NFT is a unique digital token that represents ownership or authenticity of a particular digital or physical asset.
+
+Example: Digital artwork.
+
+38\. DAO (Decentralised Autonomous Organisation)
+
+A DAO is an organisation where decisions are made through rules encoded in smart contracts and voting by members.
+
+39\. Blockchain in Healthcare
+
+Blockchain can help maintain secure medical records and control access to patient information.
+
+40\. Blockchain in Supply Chain
+
+Blockchain can track products from their origin to the final customer.
+
+Example: Tracking medicines to verify their source.
+
+41\. Blockchain in Voting
+
+Blockchain can be used to record votes in a transparent and verifiable manner.
+
+42\. Blockchain in Banking
+
+It can help with digital payments, transaction tracking and cross-border transfers.
+
+## 7. Security and Limitations
+
+43\. 51% Attack
+
+It occurs when one entity or group controls more than half of a network's mining power or relevant consensus power, potentially allowing it to manipulate certain blockchain operations.
+
+44\. Double Spending
+
+Double spending means attempting to spend the same digital currency more than once.
+
+45\. Sybil Attack
+
+An attacker creates multiple fake identities in a network to gain influence or disrupt its operations.
+
+46\. Phishing Attack
+
+A fraudulent website or message tricks users into sharing sensitive information such as passwords or recovery phrases.
+
+47\. Advantages of Blockchain
+
+- Transparency.
+- Decentralisation.
+- Better traceability.
+- Data integrity.
+- Reduced dependence on intermediaries.
+
+48\. Limitations of Blockchain
+
+- Some networks have scalability issues.
+- Transactions may take time.
+- Network fees can become high.
+- Private keys can be lost or stolen.
+- Regulations and adoption vary.
+
+## 8. Important Differences
+
+| Concepts                           | Difference                                                                                            |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Blockchain vs Traditional Database | Blockchain uses distributed records; a traditional database is usually controlled by an organisation. |
+| Public vs Private Blockchain       | Public is open to participants; private access is restricted.                                         |
+| PoW vs PoS                         | Computational work vs cryptocurrency staking.                                                         |
+| Hot vs Cold Wallet                 | Online wallet vs offline wallet.                                                                      |
+| Bitcoin vs Ethereum                | Bitcoin mainly focuses on digital currency; Ethereum supports smart contracts and DApps.              |
+| Coin vs Token                      | A coin has its own blockchain; a token is created on an existing blockchain.                          |
+| Cryptocurrency vs Fiat Currency    | Digital blockchain-based asset vs government-issued currency.                                         |
+| Centralised vs Decentralised       | One central authority vs distributed control.                                                         |
+
